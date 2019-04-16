@@ -1,13 +1,39 @@
 import React from "react";
+//import { Button } from "react-materialize";
+import Button from "@material-ui/core/Button";
 
 class Dashboard extends React.Component {
   render(props) {
     return (
       <div>
-        <button onClick={this.props.ball}>Ball</button>
-        <button onClick={this.props.hit}>Hit</button>
-        <button onClick={this.props.strike}>Strike</button>
-        <button onClick={this.props.foul}>Foul</button>
+        <Button
+          variant="contained"
+          href="#contained-buttons"
+          onClick={this.props.ball}
+        >
+          Ball
+        </Button>
+        <Button
+          variant="contained"
+          href="#contained-buttons"
+          onClick={this.props.hit}
+        >
+          Hit
+        </Button>
+        <Button
+          variant="contained"
+          href="#contained-buttons"
+          onClick={this.props.strike}
+        >
+          Strike
+        </Button>
+        <Button
+          variant="contained"
+          href="#contained-buttons"
+          onClick={this.props.foul}
+        >
+          Foul
+        </Button>
       </div>
     );
   }

@@ -1,16 +1,20 @@
 import React from "react";
+import Card from "@material-ui/core/Card";
 
 const Display = props => {
   return (
-    <div>
-      <div>
-        <h2>{props.hit}</h2>
-        <h4>Hits</h4>
-      </div>
-      <div>
+    <div className="score-container">
+      <Card className="points">
         <h2>{props.ball}</h2>
-        <h4>Balls</h4>
-      </div>
+
+        <h4> Balls</h4>
+      </Card>
+
+      <Card className="points">
+        <h2>{props.strike}</h2>
+
+        <h4> Strikes</h4>
+      </Card>
     </div>
   );
 };

@@ -14,8 +14,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Front page of app</h1>
-        <Display hit={this.state.hit} ball={this.state.ball} />
+        <h1>Baseball</h1>
+        <Display ball={this.state.ball} strike={this.state.strike} />
         <Dashboard
           foul={this.foul}
           hit={this.hit}
@@ -25,12 +25,6 @@ class App extends Component {
       </div>
     );
   }
-  reset = () => {
-    this.setState({
-      ball: 0,
-      strike: 0
-    });
-  };
 
   foul = () => {
     if (this.state.strike < 2) {
@@ -52,15 +46,29 @@ class App extends Component {
   };
 
   ball = () => {
-    this.setState({
-      ball: this.state.ball + 1
-    });
+    if (this.state.ball < 3) {
+      this.setState({
+        ball: this.state.ball + 1
+      });
+    } else {
+      this.setState({
+        ball: 0,
+        strike: 0
+      });
+    }
   };
 
   strike = () => {
-    this.setState({
-      strike: this.state.strike + 1
-    });
+    if (this.state.strike < 2) {
+      this.setState({
+        strike: this.state.strike + 1
+      });
+    } else {
+      this.setState({
+        strike: 0,
+        ball: 0
+      });
+    }
   };
 }
 
