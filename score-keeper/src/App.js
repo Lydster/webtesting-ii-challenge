@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Dashboard from "./Dashboard/Dashboard";
-
+import Display from "./Display/Display";
 import "./App.css";
 
 class App extends Component {
@@ -15,6 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Front page of app</h1>
+        <Display hit={this.state.hit} ball={this.state.ball} />
         <Dashboard
           foul={this.foul}
           hit={this.hit}
