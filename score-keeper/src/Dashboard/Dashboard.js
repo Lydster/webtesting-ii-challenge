@@ -7,6 +7,7 @@ class Dashboard extends React.Component {
     return (
       <div>
         <Button
+          title="ballbutton"
           variant="contained"
           href="#contained-buttons"
           onClick={this.props.ball}
@@ -14,6 +15,7 @@ class Dashboard extends React.Component {
           Ball
         </Button>
         <Button
+          title="hitbutton"
           variant="contained"
           href="#contained-buttons"
           onClick={this.props.hit}
@@ -21,6 +23,7 @@ class Dashboard extends React.Component {
           Hit
         </Button>
         <Button
+          title="strikebutton"
           variant="contained"
           href="#contained-buttons"
           onClick={this.props.strike}
@@ -28,6 +31,7 @@ class Dashboard extends React.Component {
           Strike
         </Button>
         <Button
+          title="foulbutton"
           variant="contained"
           href="#contained-buttons"
           onClick={this.props.foul}
