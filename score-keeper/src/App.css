@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.points {
+  width: 200px;
+  margin: 10px;
+}
